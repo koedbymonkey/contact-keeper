@@ -1,13 +1,16 @@
 import React from 'react';
 import Contacts from '../contacts/Contacts';
+import ContactForm from '../contacts/ContactForm';
 
 const Home = () => {
 	return (
 		<div className='container'>
 			<div className='row'>
-				<div className='col'></div>
 				<div className='col'>
-					<Contacts></Contacts>
+					<ContactForm />
+				</div>
+				<div className='col'>
+					<Contacts />
 				</div>
 			</div>
 		</div>
