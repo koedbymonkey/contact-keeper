@@ -14,10 +14,10 @@ const Contacts = () => {
 		<Fragment>
 			{filtered !== null
 				? filtered.map((contact) => (
-						<ContactItem key={contact.id} contact={contact}></ContactItem>
+						<ContactItem key={contact._id} contact={contact}></ContactItem>
 				  ))
 				: contacts.map((contact) => (
-						<ContactItem key={contact.id} contact={contact}></ContactItem>
+						<ContactItem key={contact._id} contact={contact}></ContactItem>
 				  ))}
 		</Fragment>
 	);
