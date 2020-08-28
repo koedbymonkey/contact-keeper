@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 default.json
+production.json
 /client/node_modules
 
 # testing
