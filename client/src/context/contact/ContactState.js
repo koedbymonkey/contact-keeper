@@ -31,7 +31,7 @@ const ContactState = (props) => {
 			const res = await axios.get('/api/contacts');
 			dispatch({
 				type: GET_CONTACTS,
-				payload: res.data.contacts.reverse(),
+				payload: res.data.contacts,
 			});
 		} catch (err) {
 			dispatch({
@@ -63,8 +63,16 @@ const ContactState = (props) => {
 		}
 	};
 	// Delete contact
-	const deleteContact = (id) => {
-		dispatch({ type: DELETE_CONTACT, payload: id });
+	const deleteContact = async (_id) => {
+		try {
+			const res = await axios.delete(`/api/contacts/${_id}`);
+			dispatch({ type: DELETE_CONTACT, payload: _id });
+		} catch (err) {
+			dispatch({
+				type: CONTACT_ERROR,
+				payload: err.response.msg,
+			});
+		}
 	};
 
 	// Set current contact
