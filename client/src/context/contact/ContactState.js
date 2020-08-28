@@ -11,17 +11,40 @@ import {
 	FILTER_CONTACTS,
 	CLEAR_FILTER,
 	CONTACT_ERROR,
+	GET_CONTACTS,
+	CLEAR_CONTACTS,
 } from '../types';
 
 const ContactState = (props) => {
 	const initialState = {
-		contacts: [],
+		contacts: null,
 		current: null,
 		filtered: null,
 		error: null,
 	};
 
 	const [state, dispatch] = useReducer(contactReducer, initialState);
+
+	// Get contacts
+	const getContacts = async () => {
+		try {
+			const res = await axios.get('/api/contacts');
+			dispatch({
+				type: GET_CONTACTS,
+				payload: res.data.contacts.reverse(),
+			});
+		} catch (err) {
+			dispatch({
+				type: CONTACT_ERROR,
+				payload: err.response,
+			});
+		}
+	};
+
+	// Clear contacts
+	const clearContacts = () => {
+		dispatch({ type: CLEAR_CONTACTS });
+	};
 
 	// Add contact
 	const addContact = async (contact) => {
@@ -78,6 +101,8 @@ const ContactState = (props) => {
 				updateContact,
 				filterContacts,
 				clearFilter,
+				getContacts,
+				clearContacts,
 			}}
 		>
 			{props.children}
