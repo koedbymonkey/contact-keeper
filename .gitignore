@@ -4,8 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-default.json
-production.json
 /client/node_modules
 
 # testing
@@ -24,3 +22,5 @@ production.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+default.json
+production.json
