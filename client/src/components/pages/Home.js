@@ -5,7 +5,7 @@ import ContactForm from '../contacts/ContactForm';
 const Home = () => {
 	return (
 		<div className='container'>
-			<div className='row'>
+			<div className={window.innerWidth < 740 ? 'col' : 'row'}>
 				<div className='col'>
 					<ContactForm />
 				</div>
