@@ -65,6 +65,7 @@ const Register = (props) => {
 							value={name}
 							onChange={onChange}
 							className='form-control'
+							autocomplete='name'
 							required
 						/>
 					</div>
@@ -77,6 +78,7 @@ const Register = (props) => {
 							value={email}
 							onChange={onChange}
 							className='form-control'
+							autocomplete='email'
 							required
 						/>
 					</div>
@@ -91,6 +93,7 @@ const Register = (props) => {
 						value={password}
 						onChange={onChange}
 						className='form-control'
+						autocomplete='new-password'
 						required
 						minLength='6'
 					/>
@@ -103,6 +106,7 @@ const Register = (props) => {
 						value={password2}
 						onChange={onChange}
 						className='form-control'
+						autocomplete='new-password'
 						required
 						minLength='6'
 					/>

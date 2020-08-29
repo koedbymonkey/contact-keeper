@@ -55,6 +55,7 @@ const ContactForm = () => {
 				placeholder='Name'
 				name='name'
 				value={name}
+				autocomplete='name'
 				onChange={onChange}
 			/>
 			<input
@@ -63,6 +64,7 @@ const ContactForm = () => {
 				placeholder='Email'
 				name='email'
 				value={email}
+				autocomplete='email'
 				onChange={onChange}
 			/>
 			<input
@@ -71,6 +73,7 @@ const ContactForm = () => {
 				placeholder='Phone'
 				name='phone'
 				value={phone}
+				autocomplete='tel'
 				onChange={onChange}
 			/>
 			<div className='card m-2 p-2'>

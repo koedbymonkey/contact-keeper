@@ -54,6 +54,7 @@ const Login = (props) => {
 						value={email}
 						onChange={onChange}
 						className='form-control'
+						autocomplete='email'
 						required
 					/>
 				</div>
@@ -65,6 +66,7 @@ const Login = (props) => {
 						value={password}
 						onChange={onChange}
 						className='form-control'
+						autocomplete='password'
 						required
 					/>
 				</div>
