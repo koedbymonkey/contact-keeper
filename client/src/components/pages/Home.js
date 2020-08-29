@@ -19,8 +19,11 @@ const Home = () => {
 					<ContactForm />
 				</div>
 				<div className='col'>
-					<ContactFilter />
-					<Contacts />
+					<div className='container mt-4'>
+						<h2 className='text-light'>Contacts</h2>
+						<ContactFilter />
+						<Contacts />
+					</div>
 				</div>
 			</div>
 		</div>

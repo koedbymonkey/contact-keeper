@@ -42,7 +42,8 @@ const Login = (props) => {
 	return (
 		<div className='card m-3 p-3'>
 			<h1>
-				Account <span className='text-primary'>Login</span>
+				<span className='text-light'>Account</span>{' '}
+				<span className='text-primary'>Login</span>
 			</h1>
 			<form onSubmit={onSubmit}>
 				<div className='form-group'>
@@ -50,7 +51,6 @@ const Login = (props) => {
 					<input
 						type='email'
 						name='email'
-						placeholder='jdoe@gmail.com'
 						value={email}
 						onChange={onChange}
 						className='form-control'
@@ -62,7 +62,6 @@ const Login = (props) => {
 					<input
 						type='password'
 						name='password'
-						placeholder='6 or more characters'
 						value={password}
 						onChange={onChange}
 						className='form-control'

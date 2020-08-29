@@ -51,7 +51,8 @@ const Register = (props) => {
 	return (
 		<div className='card m-3 p-3'>
 			<h1>
-				Account <span className='text-primary'>Register</span>
+				<span className='text-light'>Account</span>{' '}
+				<span className='text-primary'>Register</span>
 			</h1>
 			<form onSubmit={onSubmit}>
 				<div className='form-row'>
