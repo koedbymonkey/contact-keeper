@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
 import ContactContext from '../../context/contact/contactContext';
-import { UPDATE_CONTACT } from '../../context/types';
 
 const ContactForm = () => {
 	const contactContext = useContext(ContactContext);
@@ -107,10 +106,9 @@ const ContactForm = () => {
 			</div>
 			<div>
 				<input
-					className='form-control'
+					className='form-control btn btn-primary btn-block'
 					type='submit'
 					value={!current ? 'Add Contact' : 'Update Contact'}
-					className=' btn btn-primary btn-block'
 				/>
 			</div>
 			{current && (
